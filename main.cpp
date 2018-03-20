@@ -5,25 +5,50 @@ using namespace std;
 
 int main()
 {
-    char testString[1000];
-    unsigned testNumber;
-    Unit newUnit;
-    Unit anotherUnit("Data_Structures", "ICT289", 5);
+        //TEST01
+//----------------------------------------------------------------
+    Unit testUnit01;
+    char testUnitName[500], testUnitID[500];
 
-    cout << newUnit << endl << anotherUnit << endl;
+    testUnit01.GetUnitName(testUnitName);
+    testUnit01.GetUnitId(testUnitID);
 
-    anotherUnit.SetCredits(666);
-    cout << anotherUnit.GetCredits() << endl;
+    cout << testUnitName << endl << testUnitID << endl << testUnit01.GetCredits() << endl;
+//-----------------------------------------------------------------
+        //TEST02
+//-----------------------------------------------------------------
+    Unit testUnit02("Data_Stucrures", "ICT283", 3);
 
-    anotherUnit.SetUnitName("Databases_and_Stuff");
-    anotherUnit.GetUnitName(testString);
-    cout << endl << testString << endl;
+    testUnit02.GetUnitName(testUnitName);
+    testUnit02.GetUnitId(testUnitID);
 
-    anotherUnit.SetUnitId("TestID");
-    anotherUnit.GetUnitId(testString);
-    cout << endl << testString << endl;
+    cout << testUnitName << endl << testUnitID << endl << testUnit02.GetCredits() << endl;
+//--------------------------------------------------------------------
+        //TEST03 && TEST04
+//--------------------------------------------------------------------
+    Unit testUnit03;
 
-    cout << anotherUnit << endl;
+    testUnit03.SetCredits(1);
+    cout << testUnit03.GetCredits() << endl;
+//---------------------------------------------------------------------
+        //TEST05 && TEST06
+//---------------------------------------------------------------------
+    Unit testUnit05;
+
+    testUnit05.SetUnitName("Databases");
+    testUnit05.GetUnitName(testUnitName);
+
+    cout << testUnitName << endl;
+//----------------------------------------------------------------------
+        //TEST07 && TEST08
+//----------------------------------------------------------------------
+    Unit testUnit06;
+
+    testUnit06.SetUnitId("BSC203");
+    testUnit06.GetUnitId(testUnitID);
+
+    cout << testUnitID << endl;
+//----------------------------------------------------------------------
 
     return 0;
 }

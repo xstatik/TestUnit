@@ -37,6 +37,10 @@ using namespace std;
     * @version 05
     * @date 17/03/2018 Wade Davidson, removed inline functions.
     *
+    * @author Wade Davidson
+    * @version 06
+    * @date 20/03/2018 Wade Davidson, added test plan and tested.
+    *
     * @todo Remove friend functions
     *
     * @bug My program has no bugs. Well, maybe it has...
@@ -48,39 +52,53 @@ const unsigned UnitIdSize = 7;
 
 class Unit {
 public:
+        /**
+        * @brief  Default constructor
+        * @param
+        * @return
+        * @pre
+        * @post
+        */
     Unit();
+        /**
+        * @brief  Constructor with parameters
+        * @param  char*, char*, unsigned
+        * @return
+        * @pre
+        * @post m_unitName = nam, m_unitId = id, credits = cred
+        */
     Unit(const char *nam, const char *id, unsigned cred);
         // Construct a Unit from a name, section letter,
         // and number of credits.
         /**
         * @brief  Returns credit variable
-        * @param  none
+        * @param
         * @return unsigned
-        * @pre none
-        * @post none
+        * @pre
+        * @post
         */
     unsigned GetCredits() const;
         /**
         * @brief  Sets credit variable
         * @param  unsigned
         * @return void
-        * @pre none
+        * @pre
         * @post credit is set to cred
         */
     void SetCredits(unsigned cred);
         /**
         * @brief  Gets m_unitName variable
-        * @param  unsigned
+        * @param  char*
         * @return void
-        * @pre none
-        * @post none
+        * @pre
+        * @post sets nam to m_unitName
         */
     void GetUnitName(char *nam) const;
         /**
         * @brief  Sets m_unitName variable
         * @param  char *
         * @return void
-        * @pre none
+        * @pre
         * @post m_unitName is set to nam
         */
     void SetUnitName(const char *nam);
@@ -88,15 +106,15 @@ public:
         * @brief  Gets m_unitId variable
         * @param  char *
         * @return void
-        * @pre none
-        * @post none
+        * @pre
+        * @post sets id to m_unitId
         */
     void GetUnitId(char *id) const;
         /**
         * @brief  Sets m_unitId variable
         * @param  char *
         * @return void
-        * @pre none
+        * @pre
         * @post m_unitId is set to id
         */
     void SetUnitId(const char *id);
