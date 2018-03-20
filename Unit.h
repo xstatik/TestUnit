@@ -1,6 +1,6 @@
 // Unit.H - Unit class definition
-// author KRI
-// modified smr
+// author Wade Davidson
+// Now using TortoiseSVN for version mangement.
 
 #ifndef UNIT_H
 #define UNIT_H
