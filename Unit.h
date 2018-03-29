@@ -6,6 +6,7 @@
 #define UNIT_H
 
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -41,6 +42,10 @@ using namespace std;
     * @version 06
     * @date 20/03/2018 Wade Davidson, added test plan and tested.
     *
+    * @author Wade Davidson
+    * @version 07
+    * @date 29/03/2018 Wade Davidson, changed c-strings to string objects, changed test plan and tested.
+    *
     * @todo Remove friend functions
     *
     * @bug My program has no bugs. Well, maybe it has...
@@ -67,9 +72,7 @@ public:
         * @pre
         * @post m_unitName = nam, m_unitId = id, credits = cred
         */
-    Unit(const char *nam, const char *id, unsigned cred);
-        // Construct a Unit from a name, section letter,
-        // and number of credits.
+    Unit(const string &nam, const string &id, unsigned cred);
         /**
         * @brief  Returns credit variable
         * @param
@@ -88,36 +91,32 @@ public:
     void SetCredits(unsigned cred);
         /**
         * @brief  Gets m_unitName variable
-        * @param  char*
+        * @param  string
         * @return void
-        * @pre
         * @post sets nam to m_unitName
         */
-    void GetUnitName(char *nam) const;
+    void GetUnitName(string &id) const;
         /**
         * @brief  Sets m_unitName variable
-        * @param  char *
+        * @param  string
         * @return void
-        * @pre
         * @post m_unitName is set to nam
         */
-    void SetUnitName(const char *nam);
+    void SetUnitName(const string &nam);
         /**
         * @brief  Gets m_unitId variable
-        * @param  char *
+        * @param  string
         * @return void
-        * @pre
         * @post sets id to m_unitId
         */
-    void GetUnitId(char *id) const;
+    void GetUnitId(string &id) const;
         /**
         * @brief  Sets m_unitId variable
-        * @param  char *
+        * @param  string
         * @return void
-        * @pre
         * @post m_unitId is set to id
         */
-    void SetUnitId(const char *id);
+    void SetUnitId(const string &id);
         /**
         * @brief  overloads ostream operator
         * @param  ostream &, Unit &
@@ -136,9 +135,9 @@ public:
     friend istream & operator >>(istream &input, Unit &C);
 
 private:
-        char m_unitName[UnitNameSize+1];        // Unit name, C style string. not a C++ string object
-        char m_unitId[UnitIdSize+1];            // C-style string for the unit ID.
-        unsigned  m_credits;                  // number of credits
+        string m_unitName;
+        string m_unitId;
+        unsigned  m_credits;
 };
 
 #endif

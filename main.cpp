@@ -8,21 +8,25 @@ int main()
         //TEST01
 //----------------------------------------------------------------
     Unit testUnit01;
-    char testUnitName[500], testUnitID[500];
+    string testUnitName, testUnitID;
 
     testUnit01.GetUnitName(testUnitName);
     testUnit01.GetUnitId(testUnitID);
 
     cout << testUnitName << endl << testUnitID << endl << testUnit01.GetCredits() << endl;
+
+    cout << endl << "***************END OF TEST 01**************" << endl;
 //-----------------------------------------------------------------
         //TEST02
 //-----------------------------------------------------------------
-    Unit testUnit02("Data_Stucrures", "ICT283", 3);
+    Unit testUnit02("Data Stuctures", "ICT283", 3);
 
     testUnit02.GetUnitName(testUnitName);
     testUnit02.GetUnitId(testUnitID);
 
     cout << testUnitName << endl << testUnitID << endl << testUnit02.GetCredits() << endl;
+
+    cout << endl << "***************END OF TEST 02**************" << endl;
 //--------------------------------------------------------------------
         //TEST03 && TEST04
 //--------------------------------------------------------------------
@@ -30,6 +34,8 @@ int main()
 
     testUnit03.SetCredits(1);
     cout << testUnit03.GetCredits() << endl;
+
+    cout << endl << "***************END OF TEST 03 & 04**************" << endl;
 //---------------------------------------------------------------------
         //TEST05 && TEST06
 //---------------------------------------------------------------------
@@ -39,6 +45,8 @@ int main()
     testUnit05.GetUnitName(testUnitName);
 
     cout << testUnitName << endl;
+
+    cout << endl << "***************END OF TEST 05 & 06**************" << endl;
 //----------------------------------------------------------------------
         //TEST07 && TEST08
 //----------------------------------------------------------------------
@@ -48,6 +56,8 @@ int main()
     testUnit06.GetUnitId(testUnitID);
 
     cout << testUnitID << endl;
+
+    cout << endl << "***************END OF TEST 07 & 08**************" << endl;
 //----------------------------------------------------------------------
 
     return 0;

@@ -34,7 +34,6 @@
 		</Compiler>
 		<Unit filename="Unit.cpp" />
 		<Unit filename="Unit.h" />
-		<Unit filename="Version.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

@@ -2,20 +2,20 @@
 
 #include "Unit.h"
 #include <iostream>
-#include <string.h>
+#include <string>
 
 Unit::Unit()
 {
-  m_unitName[0] = '\0';
-  m_unitId[0] = '\0';
+  m_unitName = "";
+  m_unitId = "";
   m_credits = 0;
 }
 
-Unit::Unit(const char *nam, const char *id,
+Unit::Unit(const string &nam, const string &id,
                 unsigned cred)
 {
-  strncpy(m_unitName, nam, UnitNameSize);
-  strncpy(m_unitId, id, UnitIdSize);
+  m_unitName = nam;
+  m_unitId = id;
   m_credits = cred;
 }
 
@@ -29,24 +29,24 @@ void Unit::SetCredits( unsigned cred )
   m_credits = cred;
 }
 
-void Unit::GetUnitName(char *nam) const
+void Unit::GetUnitName(string &nam) const
 {
-    strncpy(nam, m_unitName, UnitNameSize);
+    nam = m_unitName;
 }
 
-void Unit::SetUnitName(const char *nam)
+void Unit::SetUnitName(const string &nam)
 {
-    strncpy(m_unitName, nam, UnitNameSize);
+    m_unitName = nam;
 }
 
-void Unit::GetUnitId(char *id) const
+void Unit::GetUnitId(string &id) const
 {
-    strncpy(id, m_unitId, UnitIdSize);
+    id = m_unitId;
 }
 
-void Unit::SetUnitId(const char *id)
+void Unit::SetUnitId(const string &id)
 {
-    strncpy(m_unitId, id, UnitIdSize);
+    m_unitId = id;
 }
 
 istream & operator >>( istream & input, Unit & U )
