@@ -51,8 +51,11 @@ void Unit::SetUnitId(const string &id)
 
 istream & operator >>( istream & input, Unit & U )
 {
-  input >> U.m_unitName >> U.m_unitId >> U.m_credits;
-  return input;
+    getline(input, U.m_unitName, ',');
+    getline(input, U.m_unitId, ',');
+    input >> U.m_credits;
+
+    return input;
 }
 
 ostream & operator <<( ostream & os, const Unit & U )

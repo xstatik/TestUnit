@@ -46,6 +46,10 @@ using namespace std;
     * @version 07
     * @date 29/03/2018 Wade Davidson, changed c-strings to string objects, changed test plan and tested.
     *
+    * @author Wade Davidson
+    * @version 08
+    * @date 29/03/2018 Wade Davidson, changed istream function to allow for spaces in strings.
+    *
     * @todo Remove friend functions
     *
     * @bug My program has no bugs. Well, maybe it has...
