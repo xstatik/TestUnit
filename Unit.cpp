@@ -4,15 +4,15 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 Unit::Unit()
 {
-  m_unitName = "";
-  m_unitId = "";
-  m_credits = 0;
+    m_credits = 0;
 }
 
-Unit::Unit(const string &nam, const string &id,
-                unsigned cred)
+
+Unit::Unit(const string &nam, const string &id, unsigned cred)
 {
   m_unitName = nam;
   m_unitId = id;
@@ -47,21 +47,4 @@ void Unit::GetUnitId(string &id) const
 void Unit::SetUnitId(const string &id)
 {
     m_unitId = id;
-}
-
-istream & operator >>( istream & input, Unit & U )
-{
-    getline(input, U.m_unitName, ',');
-    getline(input, U.m_unitId, ',');
-    input >> U.m_credits;
-
-    return input;
-}
-
-ostream & operator <<( ostream & os, const Unit & U )
-{
-  os << "  Unit:  " << U.m_unitName << '\n'
-     << "  Section: " << U.m_unitId << '\n'
-     << "  Credits: " << U.m_credits << '\n';
-  return os;
 }
