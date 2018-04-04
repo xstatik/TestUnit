@@ -1,16 +1,15 @@
 // UNIT.CPP - Unit class implementation
 
 #include "Unit.h"
-#include <iostream>
-#include <string>
 
 using namespace std;
 
 Unit::Unit()
 {
     m_credits = 0;
+    m_unitId = "";
+    m_unitName = "";
 }
-
 
 Unit::Unit(const string &nam, const string &id, unsigned cred)
 {

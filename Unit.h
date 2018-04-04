@@ -5,7 +5,6 @@
 #ifndef UNIT_H
 #define UNIT_H
 
-#include <iostream>
 #include <string>
 
 using namespace std;
@@ -51,6 +50,10 @@ using namespace std;
     * @version 09
     * @date 29/03/2018 Wade Davidson, removed istream friend functions
     *
+    * @author Wade Davidson
+    * @version 10
+    * @date 04/04/2018 Wade Davidson, changed testPlan and added data dictionary to directory
+    *
     * @todo fix bug
     *
     * @bug debugger fails if I initialise the strings??????????
@@ -90,7 +93,7 @@ class Unit
             * @return void
             * @post sets nam to m_unitName
             */
-        void GetUnitName(string &id) const;
+        void GetUnitName(string &nam) const;
             /**
             * @brief  Sets m_unitName variable
             * @param  string
